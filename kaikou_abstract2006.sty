@@ -1,0 +1,34 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   海講論文集アブストラクト
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\oddsidemargin}{-1in}
+\addtolength{\oddsidemargin}{30mm}
+\setlength{\textwidth}{150mm}
+\setlength{\topmargin}{-1in}
+\setlength{\headheight}{30mm}
+\setlength{\headsep}{0mm}
+\setlength{\textheight}{230mm}
+%=====================================================================
+\newlength{\kanjiwidth}
+\newlength{\kanjiW}
+\newlength{\kanjiS}
+\newlength{\Pindnt}
+\settowidth{\kanjiwidth}{海}\typeout{漢字１文字の幅 = \the\kanjiwidth}
+\kanjiW = 39\kanjiwidth     \typeout{漢字50文字の幅 = \the\kanjiW}
+\kanjiS = \textwidth        \typeout{１行の幅 = \the\kanjiS}
+\advance\kanjiS by -\kanjiW \typeout{１行当たりのグルーの幅 = \the\kanjiS}
+\divide\kanjiS by 39        \typeout{漢字１文字当たりのグルーの幅 = \the\kanjiS}
+\advance\Pindnt by \kanjiwidth
+\advance\Pindnt by \kanjiS  \typeout{インデントの幅 = \the\Pindnt}
+\kanjiskip  = \the\kanjiS plus 0pt minus 1pt
+\xkanjiskip = \the\kanjiS plus 0pt minus 1pt
+\parindent  = \Pindnt
+\autospacing
+\autoxspacing
+\abovedisplayskip 3pt plus 0pt minus 3pt
+\belowdisplayskip 3pt plus 0pt minus 3pt
+\abovedisplayshortskip 2pt plus 0pt minus 2pt
+\belowdisplayshortskip 3pt plus 0pt minus 3pt
+%=====================================================================
+\def\Section#1{\par\noindent{\bf【#1】　}}
+\def\Title#1{\par\noindent\centerline{\bf#1}\par\vspace{\baselineskip}}
