@@ -12,4 +12,7 @@
 *.toc
 *.fdb_latexmk
 *.fls
+*.gz
+.DS_Store
+!fig/
 !kaikou_abstract_sample.pdf
