@@ -3,7 +3,7 @@ PLATEX := platex -kanji=$(KANJI)
 PBIB := pbibtex -kanji=$(KANJI)
 DVIPDF := dvipdfmx -p a4
 
-.PHONY: all clean
+.PHONY: all clean new
 all: abst
 abst:
 	$(eval FILE := main)
@@ -12,4 +12,8 @@ abst:
 
 clean:
 	-rm -f *~ *.log *.dvi *.aux *.out
+
+new: clean
+	git init
+	git remote rename origin template
 
